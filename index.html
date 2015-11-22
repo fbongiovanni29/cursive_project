@@ -25,9 +25,10 @@
     render: function() {
        return(
          <div>
-         <div className="row">
-          <h1 className="maintitle">Learn Cursive!</h1>
-         </div>
+          <div className="row">
+            <h1 className="maintitle">Learn Cursive!</h1>
+          </div>
+
          <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
@@ -35,7 +36,7 @@
               <input className="form-control input-lg" type="text" value={this.state.text} onChange={this.handleChange} placeholder="Type words!"/>
               </form>
            </div>
-           <div className="col-md-2"></div>
+             <div className="col-md-2"></div>
            </div>
 
            <div className="row">
@@ -49,7 +50,7 @@
               <p className="cursive">Cursive: {this.state.text}</p>
             </div>
           </div>
-          </div>
+        </div>
        );
     }
   });
