@@ -20,7 +20,7 @@
     },
 
     handleChange: function(e) {
-      this.setState({text: e.target.value});
+      this.setState({text: e.target.value.substr(0,140)});
     },
 
     render: function() {
@@ -39,7 +39,6 @@
            </div>
              <div className="col-md-2"></div>
            </div>
-
            <div className="row">
             <div className="col-md-12 regular_text">
             <p className="regular_text">Print: {this.state.text}</p>
