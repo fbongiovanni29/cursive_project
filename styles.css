@@ -3,7 +3,28 @@
   src: url(LearningCurve_OT.otf);
 }
 
-p {
+body {
+  background-color: purple;
+  color: #FFF;
+}
+
+.cursive {
   font-family: teach_cursive;
+  font-size: 48pt;
+  padding-top: 30px;
+}
+
+.regular_text {
+  font-family: "Helvetica";
+  font-size: 48pt;
+  padding-top: 30px;
+}
+
+.form_control {
+  width: 60% !important;
+}
+
+.maintitle {
+  text-align: center;
   font-size: 6em;
 }

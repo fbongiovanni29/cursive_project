@@ -4,6 +4,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 <link rel="stylesheet" href="styles.css" />
   <meta charset="utf-8">
   <title>cursive helper</title>
@@ -23,11 +25,31 @@
     render: function() {
        return(
          <div>
-           <form>
-             <input type="text" value={this.state.text} onChange={this.handleChange}/>
-           </form>
-           <p className="cursive">{this.state.text}</p>
+         <div className="row">
+          <h1 className="maintitle">Learn Cursive!</h1>
          </div>
+         <div className="row">
+          <div className="col-md-2"></div>
+          <div className="col-md-8">
+            <form className="form-horizontal">
+              <input className="form-control input-lg" type="text" value={this.state.text} onChange={this.handleChange} placeholder="Type words!"/>
+              </form>
+           </div>
+           <div className="col-md-2"></div>
+           </div>
+
+           <div className="row">
+            <div className="col-md-12 regular_text">
+            <p className="regular_text">Print: {this.state.text}</p>
+            </div>
+           </div>
+
+           <div className="row">
+            <div className="col-md-12 cursive">
+              <p className="cursive">Cursive: {this.state.text}</p>
+            </div>
+          </div>
+          </div>
        );
     }
   });
