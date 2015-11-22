@@ -1,0 +1,9 @@
+@font-face {
+  font-family: teach_cursive;
+  src: url(LearningCurve_OT.otf);
+}
+
+p {
+  font-family: teach_cursive;
+  font-size: 6em;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <title>cursive helper</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script type="text/babel">
+  var FormBox = React.createClass({
+    getInitialState: function() {
+      return {text: ''};
+    },
+
+    handleChange: function(e) {
+      this.setState({text: e.target.value});
+    },
+
+    render: function() {
+       return(
+         <div>
+           <form>
+             <input type="text" value={this.state.text} onChange={this.handleChange}/>
+           </form>
+           <p className="cursive">{this.state.text}</p>
+         </div>
+       );
+    }
+  });
+
+  React.render(
+  <FormBox />,
+  document.getElementById("content")
+  );
+  </script>
+</body>
+</html>
